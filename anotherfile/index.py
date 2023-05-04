@@ -1,9 +1,8 @@
 from main import _Course
 TU225 = _Course("TU225")
 
-
-
-while True:
+runApp_bool = True #close app if False
+while runApp_bool:
     TU225.print_Menu()
     option = input("Please Choose an Option:")
     if option == '1': #Shop Management
@@ -36,8 +35,7 @@ while True:
         TU225.display_stock()
         
     elif option == '99': # exits the loop to end program
-        break
+        runApp_bool = False
     
     else:
-        print("invalid option")
-        
+        print("Invalid option, please retry")
